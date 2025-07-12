@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculator</title>
+
+  <!-- Google Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- GSAP Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+
+  <!-- NAV BAR -->
+<nav>
+  <h1 id="title">Websites</h1>
+  <button id="theme-toggle" title="Toggle Theme">
+    <span class="material-icons-outlined" id="theme-icon">bedtime</span>
+  </button>
+</nav>
+
+
+  <!-- Calculator Container -->
+  <div class="container">
+<div class="calculator">
+  <input type="text" id="display" disabled />
+  <div id="preview"></div> <!-- 👈 Now it's placed correctly below -->
+
+      <div class="buttons">
+        <button class="calc-btn" onclick="clearDisplay()">C</button>
+        <button class="calc-btn" onclick="deleteLast()">⌫</button>
+        <button class="calc-btn" onclick="appendOperator('%')">%</button>
+        <button class="calc-btn" onclick="appendOperator('/')">÷</button>
+
+        <button class="calc-btn" onclick="appendNumber('7')">7</button>
+        <button class="calc-btn" onclick="appendNumber('8')">8</button>
+        <button class="calc-btn" onclick="appendNumber('9')">9</button>
+        <button class="calc-btn" onclick="appendOperator('*')">×</button>
+
+        <button class="calc-btn" onclick="appendNumber('4')">4</button>
+        <button class="calc-btn" onclick="appendNumber('5')">5</button>
+        <button class="calc-btn" onclick="appendNumber('6')">6</button>
+        <button class="calc-btn" onclick="appendOperator('-')">−</button>
+
+        <button class="calc-btn" onclick="appendNumber('1')">1</button>
+        <button class="calc-btn" onclick="appendNumber('2')">2</button>
+        <button class="calc-btn" onclick="appendNumber('3')">3</button>
+        <button class="calc-btn" onclick="appendOperator('+')">+</button>
+
+        <button class="calc-btn zero" onclick="appendNumber('0')">0</button>
+        <button class="calc-btn" onclick="appendNumber('.')">.</button>
+        <button class="calc-btn" onclick="calculate()">=</button>
+      </div>
+    </div>
+  </div>
+
+<script src="main.js">main.js</script>
+</html>
