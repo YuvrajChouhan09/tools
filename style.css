@@ -1,0 +1,110 @@
+    :root {
+      --bg-color: #f0f0f0;
+      --text-color: #222;
+      --card-bg: #fff;
+      --accent: #007bff;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #eee;
+      --card-bg: #1e1e1e;
+      --accent: #66aaff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    /* NavBar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--card-bg);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .material-icons-outlined {
+      vertical-align: middle;
+      font-size: 24px;
+    }
+
+    /* Landing subtitle */
+    #subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+      text-align: center;
+      opacity: 0; /* For animation */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      margin: 0.3rem 0;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
