@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do Planner</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- GSAP Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+
+<link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+  <nav>
+    <h1>Website</h1>
+    <button id="theme-toggle" title="Toggle Theme">
+      <span class="material-icons-outlined" id="theme-icon">bedtime</span>
+    </button>
+  </nav>
+
+  <div class="container">
+    <div class="task-input">
+      <input type="text" id="title" placeholder="Task Title" />
+      <textarea id="description" rows="2" placeholder="Task Description"></textarea>
+      <input type="date" id="date" />
+    
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div id="task-list"></div>
+  </div>
+<script src="main.js">main.js</script>
+</body>
+</html>
